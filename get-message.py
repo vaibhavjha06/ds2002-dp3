@@ -48,12 +48,12 @@ def get_message():
                 # Print the message attributes - this is what you want to work with to reassemble the message
                 print(f"Order: {order}")
                 print(f"Word: {word}")
-                print(f"Handle: {handle}")
 
                 # Insert in dictionary
                 answer_dict[order] = word
 
-                # Save handle
+                # Delete
+                delete_message(handle)
 
             # If there is no message in the queue, print a message and exit    
             else:
@@ -67,7 +67,6 @@ def get_message():
 # Trigger the function
 if __name__ == "__main__":
     get_message()
-
 print(answer_dict)
 
 # Order dictionary by keys
@@ -83,3 +82,6 @@ print(sentence)
 
 
 # Delete message
+# Called delete_message within get_message function to to delete the message using its handle.
+# Got confirmation "Message deleted" for each message in queue
+
